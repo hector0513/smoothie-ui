@@ -2,14 +2,7 @@
   <v-container>
     <v-snackbar v-model="snackbar">
       {{ text }}
-      <v-btn
-        :color="color"
-        text
-        @click="
-          snackbar = false;
-          window.location.reload();
-        "
-      >
+      <v-btn :color="color" text @click="snackbar = false">
         Close
       </v-btn>
     </v-snackbar>
@@ -229,6 +222,9 @@ export default {
           this.color = "green";
           this.text = "Guardado";
           this.snackbar = true;
+          setTimeout(() => {
+            window.location.reload();
+          }, 1000);
         })
         .catch((e) => this.error("Error de conexion"));
 
