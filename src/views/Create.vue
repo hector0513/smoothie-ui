@@ -222,9 +222,6 @@ export default {
           this.color = "green";
           this.text = "Guardado";
           this.snackbar = true;
-          setTimeout(() => {
-            window.location.reload();
-          }, 1000);
         })
         .catch((e) => this.error("Error de conexion"));
 
