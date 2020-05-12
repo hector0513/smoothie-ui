@@ -2,7 +2,14 @@
   <v-container>
     <v-snackbar v-model="snackbar">
       {{ text }}
-      <v-btn :color="color" text @click="snackbar = false">
+      <v-btn
+        :color="color"
+        text
+        @click="
+          snackbar = false;
+          window.location.reload();
+        "
+      >
         Close
       </v-btn>
     </v-snackbar>
