@@ -2,17 +2,24 @@
   <div class="container principal">
     <div class="top">
       <div class="logo">
-        <img src alt />
+        <v-icon color="red" x-large>mdi-fire</v-icon>
         <span>Smoothie Match</span>
       </div>
       <div class="text">
-        <span>Smoothie Match was designed by smoothie specialist to find the perfect flavor to match your mood and...</span>
+        <span
+          >Smoothie Match was designed by smoothie specialist to find the
+          perfect flavor to match your mood and...</span
+        >
       </div>
     </div>
 
     <div class="bottom">
-      <router-link to="/about" class="b-green btn">Create your own smoothie</router-link>
-      <router-link to="/about" class="b-blue btn">Take me to the smoothie</router-link>
+      <v-btn color="green" x-large outlined rounded>
+        <router-link to="/create">Create your own smoothie</router-link>
+      </v-btn>
+      <v-btn color="blue" x-large outlined rounded>
+        <router-link to="/take">Take me to the smoothie</router-link>
+      </v-btn>
     </div>
   </div>
 </template>
@@ -24,12 +31,12 @@ export default {
   name: "Home",
   data() {
     return {
-      jola: "saasdasasads"
+      jola: "saasdasasads",
     };
-  }
+  },
 };
 </script>
-<style >
+<style scoped>
 .top {
   display: flex;
   flex-direction: column;
@@ -40,14 +47,20 @@ export default {
 }
 .top .logo {
   flex-basis: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-weight: bold;
 }
+
 .top .text {
   width: 85%;
   border-radius: 2rem;
-  border: 0.2rem solid red;
+  border: 0.04rem solid red;
   height: 10rem;
   font-weight: bold;
-  padding: 0.5rem 1.5rem;
+  font-size: 1rem;
+  padding: 0.8rem 1.5rem;
 }
 .bottom {
   display: flex;
@@ -60,22 +73,21 @@ export default {
   flex-direction: column;
   justify-content: space-between;
 }
-.bottom .btn {
-  width: 70%;
+.bottom .v-btn {
+  width: 87%;
   height: 4rem;
-  margin: 3rem 0;
-  background-color: rgba(255, 255, 255, 0);
+  margin: 2rem 0;
   font-weight: bold;
-  border-radius: 5rem;
+  text-align: center;
+  padding: 1rem;
+}
+.bottom a {
   text-decoration: none;
   color: black;
-  text-align: center;
-  padding: 0.7rem 0;
 }
-.btn.b-green {
-  border: 0.2rem solid green;
-}
-.btn.b-blue {
-  border: 0.2rem solid blue;
+@media (min-width: 768px) {
+  .top .text {
+    height: 3rem;
+  }
 }
 </style>

@@ -8,12 +8,5 @@ export default new Vuex.Store({
   mutations: {},
   actions: {},
   modules: {},
-  getters: {
-    mensaje(state) {
-      return "Welcome to Your Vue.js App";
-    },
-    estaLogeado(state) {
-      return false;
-    },
-  },
+  getters: {},
 });
