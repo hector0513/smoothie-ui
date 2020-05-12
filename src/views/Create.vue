@@ -176,16 +176,13 @@ export default {
       if (this.nombre == "") {
         correcto = false;
         this.error("Debe Rellenar el nombre");
-      }
-      if (this.frutasSelecionadas.length < this.cantidad) {
+      } else if (this.frutasSelecionadas.length < this.cantidad) {
         correcto = false;
         this.error("Debe selecionar todas las frutas");
-      }
-      if (this.liquidoSelecionado == "") {
+      } else if (this.liquidoSelecionado == "") {
         correcto = false;
         this.error("Debe selecionar todas el liquido");
-      }
-      if (this.proteinaSelecionada == "") {
+      } else if (this.proteinaSelecionada == "") {
         correcto = false;
         this.error("Debe Selecionar la proteina");
       }
